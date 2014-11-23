@@ -1,6 +1,6 @@
 get_clean_data_xyz2009ee
 ========================
-#In the script, the following 7 lines read in the training and testing dataset from the folder.
+#In the script, the following lines read in the training and testing dataset from the folder.
 x_train = read.table("./train/X_train.txt")
 x_test = read.table("./test/X_test.txt")
 y_test = read.table("./test/Y_test.txt")
@@ -9,7 +9,7 @@ subject_train = read.table("./train/subject_train.txt")
 subject_test = read.table("./test/subject_test.txt")
 features = read.table("features.txt")
 
-#Then the following 5 lines merge the training and testing dataset into one dataframe
+#Then the following lines merge the training and testing dataset into one dataframe
 x1_train <- cbind(x_train,y_train)
 x2_train <- cbind(x1_train,subject_train)
 x1_test <- cbind(x_test,y_test)
@@ -24,8 +24,7 @@ colnames(total2)[562] <- "activity labels"
 colnames(total2)[563] <- "subject labels"
 
 
-#Then Extracts only the measurements on the mean and standard deviation for each measurement. The 
-#new created dataframe is total3. 
+#Then Extracts only the measurements on the mean and standard deviation for each measurement. The new dataframe is total3. 
 total3 <- total2[,grep("mean|std|activity labels|subject labels",colnames(total2))]
 
 #Now labels the activity variable in the dataframe with descriptive variable names
@@ -39,9 +38,7 @@ else if(total3[i,80]==5){total3[i,80] <- "STANDING"}
 else {total3[i,80] <- "LAYING"}
 }
 
-# Creates a second, independent data set with the 
-# average of each variable for each activity and each subject.
-# column 80 is activity and column 81 is subject
+# Creates a second, independent data set with the average of each variable for each activity and each subject. Column 80 is activity and column 81 is subject
 spins = split(total3[,1:79],total3[,80:81])
 vname <- names(spins)
 x5 = data.frame(vname)
