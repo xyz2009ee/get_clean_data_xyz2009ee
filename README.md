@@ -2,6 +2,7 @@ get_clean_data_xyz2009ee
 ========================
 #In the script, the following lines read in the training and testing dataset from the folder.
 x_train = read.table("./train/X_train.txt")
+
 x_test = read.table("./test/X_test.txt")
 y_test = read.table("./test/Y_test.txt")
 y_train = read.table("./train/Y_train.txt")
@@ -24,7 +25,7 @@ colnames(total2)[562] <- "activity labels"
 colnames(total2)[563] <- "subject labels"
 
 
-#Then Extracts only the measurements on the mean and standard deviation for each measurement. The new dataframe is total3. 
+#Then extracts only the measurements on the mean and standard deviation for each measurement. The new dataframe is total3. 
 total3 <- total2[,grep("mean|std|activity labels|subject labels",colnames(total2))]
 
 #Now labels the activity variable in the dataframe with descriptive variable names
