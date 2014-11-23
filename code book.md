@@ -77,7 +77,7 @@ bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of e
 
 angle(): Angle between to vectors.
 
-#Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() #variable:
+#Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
 gravityMean
 
@@ -89,7 +89,6 @@ tBodyGyroMean
 
 tBodyGyroJerkMean
 
-#After the train and test data is read in and merged into one dataframe. The variables with mean() and std() were
-#extracted into a new dataframe. 
+#After the train and test data is read in and merged into one dataframe. The variables with mean() and std() wer extracted into a new dataframe. 
 
 
