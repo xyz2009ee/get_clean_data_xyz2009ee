@@ -2,8 +2,11 @@ get_clean_data_xyz2009ee
 ========================
 #In the script, the following lines read in the training and testing dataset from the folder.
 x_train = read.table("./train/X_train.txt")
+
 x_test = read.table("./test/X_test.txt")
+
 y_test = read.table("./test/Y_test.txt")
+
 y_train = read.table("./train/Y_train.txt")
 subject_train = read.table("./train/subject_train.txt")
 subject_test = read.table("./test/subject_test.txt")
